@@ -4,7 +4,7 @@ import { SplitText } from "gsap/all";
 
 const HeroSection = () => {
 
-  // custom react hook that makes it easy to run GSAP Animations when a component maps
+  // custom react hook that makes it easy to run GSAP Animations when a component mounts
   useGSAP(() => {
 
     //SplitText is a plugin in GSAP that lets you take any block of text and break into smaller parts like words, lines, or individual chars.

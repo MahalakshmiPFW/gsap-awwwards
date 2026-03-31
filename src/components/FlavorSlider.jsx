@@ -1,31 +1,48 @@
 import { useGSAP } from "@gsap/react";
 import { flavorlists } from "../constants";
 import gsap from "gsap";
+//React hook to store a reference to a real DOM element
 import { useRef } from "react";
+// hook to check screen size using media queries
 import { useMediaQuery } from "react-responsive";
 
 const FlavorSlider = () => {
+  // creates a ref so we can directly access the slider wrapper DOM element
+  // sliderRef.current will point to the actual <div> after render
   const sliderRef = useRef();
 
+  // checks whether screen width is 1024px or smaller
+  // true = tablet/mobile-ish screen
+  // false = desktop/larger screen
   const isTablet = useMediaQuery({
     query: "(max-width: 1024px)",
   });
 
   useGSAP(() => {
+    // total extra horizontal content beyond the visible screen width
+    // scrollWidth = total full width of the slider content
+    // window.innerWidth = visible browser width
+    // this tells us how far we need to move horizontally
     const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
 
+    // only run the horizontal pin + slide effect on desktop
     if (!isTablet) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".flavor-section",
           start: "2% top",
+          // animation lasts this much extra scroll distance
+          // bigger value = longer scrolling section
           end: `+=${scrollAmount + 1500}px`,
           scrub: true,
+          // keeps the section fixed while user scrolls through the animation
           pin: true,
         },
       });
 
+      // animate the whole flavor section horizontally to the left
       tl.to(".flavor-section", {
+        // move left by the amount needed to reveal all hidden content
         x: `-${scrollAmount + 1500}px`,
         ease: "power1.inOut",
       });
@@ -64,6 +81,7 @@ const FlavorSlider = () => {
   });
 
   return (
+    // ref is attached so we can measure its full width in GSAP
     <div ref={sliderRef} className="slider-wrapper">
       <div className="flavors">
         {flavorlists.map((flavor) => (
