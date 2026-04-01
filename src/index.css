@@ -211,22 +211,6 @@ body::-webkit-scrollbar {
     .fourth-title {
       @apply rotate-[-5deg] md:-translate-y-12;
     }
-
-    .vd-pin-section {
-      @apply md:h-[110vh] h-dvh overflow-hidden md:!-translate-y-[15%] md:mt-0 mt-20;
-
-      video {
-        @apply size-full absolute inset-0 object-cover;
-      }
-
-      .play-btn {
-        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[9vw] flex justify-center items-center bg-[#ffffff1a] backdrop-blur-xl rounded-full;
-      }
-
-      img:first-of-type {
-        @apply size-[15vw];
-      }
-    }
   }
 
   .testimonials-section {
