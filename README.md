@@ -1,4 +1,4 @@
-**GSAP Frontend Project**
+## GSAP Frontend Project
 
 **Overview**
 
