@@ -1,16 +1,27 @@
-# React + Vite
+GSAP Frontend Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
 
-Currently, two official plugins are available:
+This is a frontend animation learning project built while exploring and following a tutorial on GSAP (GreenSock Animation Platform) with React and Tailwind CSS. The goal was to understand scroll-based animations, timelines, and responsive animation behavior through hands-on practice.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+What This Project Demonstrates
+	•	Scroll-triggered animations using GSAP
+	•	Horizontal scrolling sections with pinning
+	•	Timeline-based animation sequencing
+	•	Responsive animation handling
+	•	Clean component-based React structure
 
-## React Compiler
+Tech Stack
+	•	React
+	•	Vite
+	•	Tailwind CSS
+	•	GSAP + ScrollTrigger
+    •	Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+Why This Matters
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Animation plays a major role in modern product experiences. This project helped strengthen practical understanding of:
+	•	motion-driven storytelling
+	•	scroll-based interaction design
+	•	performance-aware animation setup
